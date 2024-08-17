@@ -48,8 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
           child: SizedBox(
-        height: 300,
-        width: 300,
+        height: 500,
+        width: 500,
         child: CustomPaint(painter: ClockPainter()),
       )),
       floatingActionButton: FloatingActionButton(

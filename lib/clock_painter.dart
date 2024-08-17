@@ -5,33 +5,33 @@ import 'package:flutter/material.dart';
 class ClockPainter extends CustomPainter {
   final bool isRoman = true;
   static const roman = [
-    'XII'
-        'I'
-        'II'
-        'III'
-        'IV'
-        'V'
-        'VI'
-        'VII'
-        'VIII'
-        'IX'
-        'X'
-        'XI'
+    'XII',
+    'I',
+    'II',
+    'III',
+    'IV',
+    'V',
+    'VI',
+    'VII',
+    'VIII',
+    'IX',
+    'X',
+    'XI'
   ];
 
   static const digits = [
     '12'
-        '1'
-        '2'
-        '3'
-        '4'
-        '5'
-        '6'
-        '7'
-        '8'
-        '9'
-        '10'
-        '11'
+        '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    '11'
   ];
 
   @override
@@ -96,6 +96,7 @@ class ClockPainter extends CustomPainter {
         canvas.drawLine(Offset(0, -minutesNeedleBaseRadius),
             Offset(0, -radius + minutesNeedleGap), minutesNeedlePaint);
       }
+
       if (isHour) {
         var text = isRoman ? roman[i ~/ 5] : digits[i ~/ 5];
         ticklenght = hoursTicklenght;
@@ -105,7 +106,7 @@ class ClockPainter extends CustomPainter {
         textPainter.text = TextSpan(text: text);
 
         textPainter.layout();
-        textPainter.paint(canvas, Offset(-5, -radius + hoursNeedleGap - 8));
+        textPainter.paint(canvas, Offset(0, -radius + hoursNeedleGap - 8));
       } else {
         ticklenght = minutesTicklenght;
         tickPaint = minutesPaint;
